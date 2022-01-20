@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple js counter</title>
+</head>
+<body>
+
+<style>
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  #counter{
+    font-size: xx-large;
+    text-align: center;
+    margin: 2em;
+  }
+  .title{
+    text-align: center;
+  }
+</style>
+
+<h1 class="title">Simple Js counter</h1>
+
+<div id="counter"> 0 </div>
+<div class="container">
+    <button onclick="increase()">Inscrease</button>
+    <button onclick="decrease()">Descrease</button>
+</div>
+
+<script>
+let count = 0
+function setCounter() {
+  const countElement = document.getElementById("counter");
+  countElement.innerHTML = count;
+  document.body.style.backgroundColor = '#' + (Math.random() * 0xFFFFFF << 0)
+  console.log(document.body.style.backgroundColor)
+}
+
+function increase() {
+  count ++;
+  setCounter();
+}
+
+function decrease() {
+  count --;
+  setCounter();
+}
+
+</script>
+</body>
+</html>
